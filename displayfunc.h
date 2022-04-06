@@ -26,11 +26,12 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <math.h>
 
-// Jens's patch for MacOS
-#ifdef __MACOSX
-#include <GLut/glut.h>
+// for mac osx
+#ifdef __APPLE__
+#include <GLUT/glut.h>
 #else
-#include <GL/glut.h>
+// for windows and linux
+#include <GL/freeglut.h>
 #endif
 
 #include "vec.h"
