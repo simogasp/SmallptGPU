@@ -30,7 +30,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #endif
 #include <math.h>
 
-#if defined(__linux__) || defined(__MACOSX)
+#if defined(__linux__) || defined(__APPLE__)
 #include <sys/time.h>
 #elif defined (WIN32)
 #include <windows.h>
@@ -63,7 +63,7 @@ static int printHelp = 1;
 static int currentSphere;
 
 double WallClockTime() {
-#if defined(__linux__) || defined(__MACOSX)
+#if defined(__linux__) || defined(__APPLE__)
 	struct timeval t;
 	gettimeofday(&t, NULL);
 
